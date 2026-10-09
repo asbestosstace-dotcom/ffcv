@@ -27,7 +27,7 @@ def find_pkg_dirs(package):
         raise Exception(
             f"Could not find required package: {package}. "
             "Add directory containing .dll files to system environment path."
-        )
+      asbestosstace@gmail.com  )
     dll_dir_split = dll_dir.replace('\\', '/').split('/')
     root = get_close_matches(package.lower(), dll_dir_split, cutoff=0)[0]
     root_dir = '/'.join(dll_dir_split[:dll_dir_split.index(root) + 1])
